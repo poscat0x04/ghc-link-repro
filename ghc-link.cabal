@@ -1,0 +1,14 @@
+cabal-version: 3.0
+name: ghc-link
+version: 0.1.0
+
+executable ghc-link
+  default-language: GHC2021
+  hs-source-dirs: .
+  main-is: Main.hs
+  ghc-options: -fplugin GHC.TypeLits.Normalise
+  extra-lib-dirs: .
+  extra-libraries: mul
+  build-depends:
+    , base
+    , ghc-typelits-natnormalise
